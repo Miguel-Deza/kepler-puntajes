@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Puntajes Máximos y Mínimos por Carrera</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+			}
+
+			h1 {
+				color: #333;
+			}
+
+			table {
+				border-collapse: collapse;
+				width: 100%;
+				margin: 20px auto;
+				max-width: 800px;
+			}
+
+			th,
+			td {
+				border: 1px solid #000;
+				padding: 8px;
+				text-align: left;
+			}
+
+			th {
+				background-color: #f2f2f2;
+			}
+
+			select {
+				padding: 10px;
+			}
+
+			button {
+                margin-top: 20px;
+				padding: 10px;
+				background-color: #007bff;
+				color: #fff;
+				border: none;
+				cursor: pointer;
+			}
+
+			.conteiner {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				height: 80vh;
+                align-items: center;
+			}
+            
+		</style>
+	</head>
+	<body>
+		<div class="conteiner">
+			<img src="icon.png" alt="">
+			<h1>Puntajes Máximos y Mínimos por Carrera</h1>
+			<label for="carrera">Selecciona una carrera:</label>
+			<select id="carrera">
+				<option value="BIOLOGIA">BIOLOGIA</option>
+				<option value="CIENCIAS DE LA NUTRICION">
+					CIENCIAS DE LA NUTRICION
+				</option>
+				<option value="ENFERMERIA">ENFERMERIA</option>
+				<option value="MEDICINA">MEDICINA</option>
+				<option value="AGRONOMIA">AGRONOMIA</option>
+				<option value="INGENIERIA PESQUERA">INGENIERIA PESQUERA</option>
+				<option value="ARQUITECTURA">ARQUITECTURA</option>
+				<option value="FISICA">FISICA</option>
+				<option value="MATEMATICAS">MATEMATICAS</option>
+				<option value="QUIMICA">QUIMICA</option>
+				<option value="INGENIERIA GEOFISICA">
+					INGENIERIA GEOFISICA
+				</option>
+				<option value="INGENIERIA GEOLOGICA">
+					INGENIERIA GEOLOGICA
+				</option>
+				<option value="INGENIERIA ELECTRONICA">
+					INGENIERIA ELECTRONICA
+				</option>
+				<option value="INGENIERIA INDUSTRIAL">
+					INGENIERIA INDUSTRIAL
+				</option>
+				<option value="INGENIERIA CIVIL">INGENIERIA CIVIL</option>
+				<option value="INGENIERIA METALURGICA">
+					INGENIERIA METALURGICA
+				</option>
+				<option value="INGENIERIA QUIMICA">INGENIERIA QUIMICA</option>
+				<option value="INGENIERIA DE MINAS">INGENIERIA DE MINAS</option>
+				<option value="INGENIERIA INDUSTRIAS ALIMENTARIAS">
+					INGENIERIA INDUSTRIAS ALIMENTARIAS
+				</option>
+				<option value="INGENIERIA DE MATERIALES">
+					INGENIERIA DE MATERIALES
+				</option>
+				<option value="INGENIERIA DE SISTEMAS">
+					INGENIERIA DE SISTEMAS
+				</option>
+				<option value="INGENIERIA ELECTRICA">
+					INGENIERIA ELECTRICA
+				</option>
+				<option value="INGENIERIA MECANICA">INGENIERIA MECANICA</option>
+				<option value="INGENIERIA AMBIENTAL">
+					INGENIERIA AMBIENTAL
+				</option>
+				<option value="CIENCIA DE LA COMPUTACION">
+					CIENCIA DE LA COMPUTACION
+				</option>
+				<option value="INGENIERIA SANITARIA">
+					INGENIERIA SANITARIA
+				</option>
+				<option value="INGENIERIA DE TELECOMUNICACIONES">
+					INGENIERIA DE TELECOMUNICACIONES
+				</option>
+				<option value="EDUCACION -  CIENCIAS NATURALES">
+					EDUCACION - CIENCIAS NATURALES
+				</option>
+				<option value="EDUCACION -   CS. SOCIALES">
+					EDUCACION - CS. SOCIALES
+				</option>
+				<option value="EDUCACION -    EDUCACION INICIAL">
+					EDUCACION - EDUCACION INICIAL
+				</option>
+				<option value="EDUCACION -    FISICO MATEMATICA">
+					EDUCACION - FISICO MATEMATICA
+				</option>
+				<option value="EDUCACION -    LENGUA,LITE,FILO,PSIC">
+					EDUCACION - LENGUA,LITE,FILO,PSIC
+				</option>
+				<option value="EDUCACION -    EDUCACION PRIMARIA">
+					EDUCACION - EDUCACION PRIMARIA
+				</option>
+				<option value="EDUCACION -    IDIOMAS">
+					EDUCACION - IDIOMAS
+				</option>
+				<option value="EDUCACION -    INFORMATICA EDUCATIVA">
+					EDUCACION - INFORMATICA EDUCATIVA
+				</option>
+				<option value="EDUCACION -     EDUCACION FISICA">
+					EDUCACION - EDUCACION FISICA
+				</option>
+				<option value="HISTORIA">HISTORIA</option>
+				<option value="SOCIOLOGIA">SOCIOLOGIA</option>
+				<option value="TRABAJO SOCIAL">TRABAJO SOCIAL</option>
+				<option value="ANTROPOLOGIA">ANTROPOLOGIA</option>
+				<option value="ADMINISTRACION">ADMINISTRACION</option>
+				<option value="CONTABILIDAD">CONTABILIDAD</option>
+				<option value="DERECHO">DERECHO</option>
+				<option value="ECONOMIA">ECONOMIA</option>
+				<option value="ARTES - MUSICA">ARTES - MUSICA</option>
+				<option value="ARTES - PLASTICAS">ARTES - PLASTICAS</option>
+				<option value="FILOSOFIA">FILOSOFIA</option>
+				<option value="LITERATURA">LITERATURA</option>
+				<option value="PSICOLOGIA">PSICOLOGIA</option>
+				<option value="RELACIONES INDUSTRIALES">
+					RELACIONES INDUSTRIALES
+				</option>
+				<option
+					value="CIENCIAS DE LA COMUNICACION - RELACIONES PUBLICAS"
+				>
+					CIENCIAS DE LA COMUNICACION - RELACIONES PUBLICAS
+				</option>
+				<option value="CIENCIAS DE LA COMUNICACION - PERIODISMO">
+					CIENCIAS DE LA COMUNICACION - PERIODISMO
+				</option>
+				<option value="TURISMO Y HOTELERIA">TURISMO Y HOTELERIA</option>
+				<option value="FINANZAS">FINANZAS</option>
+				<option value="MARKETING">MARKETING</option>
+				<option value="BANCA Y SEGUROS">BANCA Y SEGUROS</option>
+				<option value="GESTION PUBLICA">GESTION PUBLICA</option>
+				<option value="GESTION DE EMPRESAS">GESTION DE EMPRESAS</option>
+				<option value="GESTION DE PROYECTOS">
+					GESTION DE PROYECTOS
+				</option>
+			</select>
+			<button onclick="mostrarPuntajes()">Ver Puntajes</button>
+			<table id="tabla" style="display: none">
+				<tr>
+					<th>Carrera</th>
+					<th>Máximo</th>
+					<th>Mínimo</th>
+				</tr>
+			</table>
+		</div>
+
+		<script>
+			const datos = [
+				["BIOLOGIA", 80.504728, 57.004097],
+				["CIENCIAS DE LA NUTRICION", 75.058848, 53.699171],
+				["ENFERMERIA", 81.584679, 68.287659],
+				["MEDICINA", 89.480002, 79.582129],
+				["AGRONOMIA", 62.774559, 47.050269],
+				["INGENIERIA PESQUERA", 56.937576, 42.868594],
+				["ARQUITECTURA", 72.944332, 63.565035],
+				["FISICA", 68.155491, 46.144707],
+				["MATEMATICAS", 69.122944, 46.128662],
+				["QUIMICA", 65.23248, 46.97699],
+				["INGENIERIA GEOFISICA", 70.35171, 49.682077],
+				["INGENIERIA GEOLOGICA", 63.655472, 54.37349],
+				["INGENIERIA ELECTRONICA", 73.275736, 55.656124],
+				["INGENIERIA INDUSTRIAL", 70.813829, 61.855338],
+				["INGENIERIA CIVIL", 76.561632, 68.706137],
+				["INGENIERIA METALURGICA", 68.550433, 55.416906],
+				["INGENIERIA QUIMICA", 84.146876, 52.165246],
+				["INGENIERIA DE MINAS", 70.344506, 58.90008],
+				["INGENIERIA INDUSTRIAS ALIMENTARIAS", 66.000856, 49.424424],
+				["INGENIERIA DE MATERIALES", 63.963796, 46.462163],
+				["INGENIERIA DE SISTEMAS", 77.844935, 61.901518],
+				["INGENIERIA ELECTRICA", 69.8628, 54.553217],
+				["INGENIERIA MECANICA", 69.562182, 57.937281],
+				["INGENIERIA AMBIENTAL", 79.17541, 57.349422],
+				["CIENCIA DE LA COMPUTACION", 74.151784, 58.993852],
+				["INGENIERIA SANITARIA", 68.999518, 52.21084],
+				["INGENIERIA DE TELECOMUNICACIONES", 67.232177, 52.162493],
+				["EDUCACION -  CIENCIAS NATURALES", 71.515639, 49.047561],
+				["EDUCACION -   CS. SOCIALES", 71.052804, 55.882161],
+				["EDUCACION -    EDUCACION INICIAL", 64.65739, 57.070623],
+				["EDUCACION -    FISICO MATEMATICA", 65.189894, 55.406004],
+				["EDUCACION -    LENGUA,LITE,FILO,PSIC", 65.304486, 56.343704],
+				["EDUCACION -    EDUCACION PRIMARIA", 72.015959, 59.552091],
+				["EDUCACION -    IDIOMAS", 67.870123, 57.680103],
+				["EDUCACION -    INFORMATICA EDUCATIVA", 60.474895, 48.616567],
+				["EDUCACION -     EDUCACION FISICA", 67.17777, 52.092929],
+				["HISTORIA", 65.682501, 37.311852],
+				["SOCIOLOGIA", 59.038598, 40.674825],
+				["TRABAJO SOCIAL", 58.08318, 47.858117],
+				["ANTROPOLOGIA", 55.719273, 38.074615],
+				["ADMINISTRACION", 67.768989, 53.913641],
+				["CONTABILIDAD", 67.412766, 49.873706],
+				["DERECHO", 75.883842, 61.173869],
+				["ECONOMIA", 71.956821, 55.755386],
+				["ARTES - MUSICA", 68.914471, 38.540942],
+				["ARTES - PLASTICAS", 67.09806, 43.77125],
+				["FILOSOFIA", 56.320678, 38.410623],
+				["LITERATURA", 58.079628, 38.449114],
+				["PSICOLOGIA", 75.537983, 62.697282],
+				["RELACIONES INDUSTRIALES", 59.089272, 47.723171],
+				[
+					"CIENCIAS DE LA COMUNICACION - RELACIONES PUBLICAS",
+					65.626664,
+					48.028111,
+				],
+				[
+					"CIENCIAS DE LA COMUNICACION - PERIODISMO",
+					66.670124,
+					49.492275,
+				],
+				["TURISMO Y HOTELERIA", 66.186054, 42.787503],
+				["FINANZAS", 63.686307, 44.111964],
+				["MARKETING", 66.497944, 48.983767],
+				["BANCA Y SEGUROS", 57.203795, 39.288885],
+				["GESTION PUBLICA", 63.676159, 41.745777],
+				["GESTION DE EMPRESAS", 58.29507, 45.804576],
+				["GESTION DE PROYECTOS", 59.242293, 40.125903],
+			];
+
+			function mostrarPuntajes() {
+				const selectedCarrera =
+					document.getElementById("carrera").value;
+				const tabla = document.getElementById("tabla");
+				tabla.style.display = "inline-flex";
+				tabla.style.justifyContent = "center";
+
+				while (tabla.rows.length > 1) {
+					tabla.deleteRow(1);
+				}
+
+				datos.forEach((fila) => {
+					if (fila[0] === selectedCarrera) {
+						const newRow = tabla.insertRow(tabla.rows.length);
+						fila.forEach((dato, index) => {
+							const cell = newRow.insertCell(index);
+							cell.textContent = dato;
+						});
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
